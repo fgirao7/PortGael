@@ -131,21 +131,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Active nav link highlighting
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav__link, .mobile-nav__link');
-  
+
   navLinks.forEach(function(link) {
     const href = link.getAttribute('href');
-    
+
     // Check if this link matches current page
-    if (href === currentPath || 
+    if (href === currentPath ||
         (currentPath.includes(href) && href !== '/' && href !== 'index.html')) {
       link.classList.add('active');
     }
-    
+
     // Handle index page
-    if ((currentPath === '/' || currentPath.endsWith('index.html')) && 
+    if ((currentPath === '/' || currentPath.endsWith('index.html')) &&
         (href === '/' || href === 'index.html')) {
       link.classList.add('active');
     }
   });
+
+  // Testimonials infinite scroll - duplicate cards for seamless loop
+  const track = document.querySelector('.testimonials__track');
+  if (track) {
+    const cards = track.innerHTML;
+    track.innerHTML = cards + cards;
+  }
   
 });
