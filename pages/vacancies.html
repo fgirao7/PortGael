@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse healthcare job vacancies in Ireland - Nursing, Medical, and Allied Health positions available.">
+  <title>Vacancies | PortGael Healthcare Recruitment</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo.png" alt="PortGael" class="logo__image">
+        </a>
+        
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list">
+            <li><a href="about.html" class="nav__link">About Us</a></li>
+            <li><a href="vacancies.html" class="nav__link active">Vacancies</a></li>
+            <li><a href="submit-cv.html" class="nav__link">Submit CV</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header__actions">
+          <a href="submit-cv.html" class="btn btn--primary btn--hide-mobile">Submit CV</a>
+          <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="material-symbols-outlined icon">menu</span>
+          </button>
+        </div>
+      </div>
+      
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="about.html" class="mobile-nav__link">About Us</a>
+        <a href="vacancies.html" class="mobile-nav__link">Vacancies</a>
+        <a href="submit-cv.html" class="mobile-nav__link">Submit CV</a>
+        <a href="contact.html" class="mobile-nav__link">Contact</a>
+        <a href="submit-cv.html" class="btn btn--primary btn--full">Submit CV</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section class="py-8">
+      <div class="container">
+        <h1 class="mb-8">Healthcare Vacancies in Ireland</h1>
+        
+        <div class="jobs-list">
+              
+              <!-- Job Card 1 - Staff Nurse -->
+              <article class="job-card">
+                <div class="job-card__header">
+                  <div>
+                    <h3 class="job-card__title">Staff Nurse (Nursing Home)</h3>
+                    <p class="job-card__company">South Dublin</p>
+                  </div>
+                  <span class="job-card__badge">Full Time</span>
+                </div>
+                <div class="job-card__meta">
+                  <span class="job-card__meta-item">
+                    <span class="material-symbols-outlined icon">euro_symbol</span>
+                    From €40,000
+                  </span>
+                  <span class="job-card__meta-item">
+                    <span class="material-symbols-outlined icon">location_on</span>
+                    South Dublin
+                  </span>
+                </div>
+                <div class="job-card__actions">
+                  <a href="vacancy-staff-nurse.html" class="btn btn--primary">View Details</a>
+                </div>
+              </article>
+              
+              <!-- Job Card 2 - Healthcare Assistant -->
+              <article class="job-card">
+                <div class="job-card__header">
+                  <div>
+                    <h3 class="job-card__title">Healthcare Assistant (Nursing Home)</h3>
+                    <p class="job-card__company">South Dublin</p>
+                  </div>
+                  <span class="job-card__badge">Full Time</span>
+                </div>
+                <div class="job-card__meta">
+                  <span class="job-card__meta-item">
+                    <span class="material-symbols-outlined icon">euro_symbol</span>
+                    From €30,000
+                  </span>
+                  <span class="job-card__meta-item">
+                    <span class="material-symbols-outlined icon">location_on</span>
+                    South Dublin
+                  </span>
+                </div>
+                <div class="job-card__actions">
+                  <a href="vacancy-hca.html" class="btn btn--primary">View Details</a>
+                </div>
+              </article>
+              
+            </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="PortGael" class="logo__image">
+          </a>
+          <p>Leading recruitment bridge for healthcare professionals between Portugal and Ireland. Committed to excellence, trust, and career growth.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Home</a></li>
+            <li><a href="vacancies.html" class="footer__link">Available Vacancies</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="submit-cv.html" class="footer__link">Submit CV</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__links">
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined icon">mail</span>
+              info@portgaelrecruitment.com
+            </li>
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined icon">location_on</span>
+              Stillorgan, Dublin
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 PortGael Recruitment Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../js/main.js"></script>
+</body>
+</html>

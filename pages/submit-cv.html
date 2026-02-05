@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your CV to PortGael - Start your healthcare career journey in Ireland today.">
+  <title>Submit Your CV | PortGael Healthcare Recruitment</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo.png" alt="PortGael" class="logo__image">
+        </a>
+        
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list">
+            <li><a href="about.html" class="nav__link">About Us</a></li>
+            <li><a href="vacancies.html" class="nav__link">Vacancies</a></li>
+            <li><a href="submit-cv.html" class="nav__link active">Submit CV</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header__actions">
+          <a href="submit-cv.html" class="btn btn--primary btn--hide-mobile">Submit CV</a>
+          <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="material-symbols-outlined icon">menu</span>
+          </button>
+        </div>
+      </div>
+      
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="about.html" class="mobile-nav__link">About Us</a>
+        <a href="vacancies.html" class="mobile-nav__link">Vacancies</a>
+        <a href="submit-cv.html" class="mobile-nav__link">Submit CV</a>
+        <a href="contact.html" class="mobile-nav__link">Contact</a>
+        <a href="submit-cv.html" class="btn btn--primary btn--full">Submit CV</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section class="py-12">
+      <div class="container">
+        <div style="max-width: 720px; margin: 0 auto;">
+          <div class="card card--elevated" style="padding: 2.5rem;">
+            <h1 class="mb-3">Join the Irish Healthcare System</h1>
+            <p class="text-muted mb-8">
+              Take the first step towards your new career. Submit your CV and our team will match you with suitable opportunities in Ireland.
+            </p>
+            
+            <form name="cv-submission" method="POST" data-netlify="true" enctype="multipart/form-data" netlify-honeypot="bot-field" class="flex flex-col gap-6">
+              <input type="hidden" name="form-name" value="cv-submission">
+              <input type="hidden" name="_subject" value="New CV Submission - PortGael">
+              <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+              <!-- Personal Information -->
+              <div class="form-group">
+                <label class="form-label" for="cv-name">Full Name *</label>
+                <input type="text" id="cv-name" name="name" class="form-input" placeholder="Maria Silva" required>
+              </div>
+              
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label class="form-label" for="cv-email">Email Address *</label>
+                  <input type="email" id="cv-email" name="email" class="form-input" placeholder="maria@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cv-phone">Phone Number *</label>
+                  <input type="tel" id="cv-phone" name="phone" class="form-input" placeholder="+351 912 345 678" required>
+                </div>
+              </div>
+              
+              <!-- Professional Information -->
+              <div class="form-group">
+                <label class="form-label" for="cv-specialization">Specialization *</label>
+                <select id="cv-specialization" name="specialization" class="form-input" required>
+                  <option value="">Select your specialization</option>
+                  <option value="rn">Registered Nurse (RN)</option>
+                  <option value="gp">General Practitioner</option>
+                  <option value="physio">Physiotherapist</option>
+                  <option value="ot">Occupational Therapist</option>
+                  <option value="hca">Healthcare Assistant</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label class="form-label" for="cv-experience">Years of Experience</label>
+                  <select id="cv-experience" name="experience" class="form-input">
+                    <option value="">Select experience</option>
+                    <option value="0-1">Less than 1 year</option>
+                    <option value="1-2">1-2 years</option>
+                    <option value="2-5">2-5 years</option>
+                    <option value="5-10">5-10 years</option>
+                    <option value="10+">10+ years</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cv-english">English Level</label>
+                  <select id="cv-english" name="english-level" class="form-input">
+                    <option value="">Select level</option>
+                    <option value="a2">A2 - Basic</option>
+                    <option value="b1">B1 - Intermediate</option>
+                    <option value="b2">B2 - Upper Intermediate</option>
+                    <option value="c1">C1 - Advanced</option>
+                    <option value="c2">C2 - Proficient</option>
+                    <option value="native">Native Speaker</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="cv-nmbi">NMBI Registration Status</label>
+                <select id="cv-nmbi" name="nmbi-status" class="form-input">
+                  <option value="">Select status</option>
+                  <option value="registered">Already Registered with NMBI</option>
+                  <option value="in-progress">Application in Progress</option>
+                  <option value="not-started">Not Yet Started</option>
+                  <option value="na">Not Applicable</option>
+                </select>
+              </div>
+              
+              <!-- CV Upload -->
+              <div class="form-group">
+                <label class="form-label" for="cv-file">Upload Your CV (PDF or Word) *</label>
+                <input type="file" accept=".pdf,.doc,.docx" id="cv-file" name="cv-file" class="form-input" required style="padding: 0.75rem;">
+                <p class="text-xs text-muted mt-2">Max file size: 10MB</p>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="cv-availability">Availability to Start</label>
+                <select id="cv-availability" name="availability" class="form-input">
+                  <option value="">Select availability</option>
+                  <option value="immediate">Immediately</option>
+                  <option value="1-month">Within 1 month</option>
+                  <option value="2-3-months">2-3 months</option>
+                  <option value="3-6-months">3-6 months</option>
+                  <option value="6+months">6+ months</option>
+                </select>
+              </div>
+              
+              <!-- Additional Notes -->
+              <div class="form-group">
+                <label class="form-label" for="cv-notes">Additional Information</label>
+                <textarea id="cv-notes" name="notes" class="form-textarea" placeholder="Tell us about yourself, your career goals, or any specific requirements..."></textarea>
+              </div>
+              
+              <!-- Consent -->
+              <label class="checkbox-label">
+                <input type="checkbox" name="privacy-agreed" required>
+                I agree to the <a href="privacy-policy.html" class="text-primary">Privacy Policy</a> and consent to PortGael processing my personal data for recruitment purposes. *
+              </label>
+              
+              <label class="checkbox-label">
+                <input type="checkbox" name="newsletter">
+                I would like to receive updates about new job opportunities and career tips.
+              </label>
+              
+              <button type="submit" class="btn btn--primary btn--lg btn--full">Submit Application</button>
+            </form>
+          </div>
+          
+          <!-- What Happens Next -->
+          <div class="mt-8">
+            <h2 class="text-center mb-6">What Happens Next?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="card" style="text-align: center;">
+                <div class="step-card__number" style="margin: 0 auto var(--space-md);">1</div>
+                <h3 class="font-bold mb-2">Review</h3>
+                <p class="text-sm text-muted">Our team reviews your CV within 48 hours</p>
+              </div>
+              <div class="card" style="text-align: center;">
+                <div class="step-card__number" style="margin: 0 auto var(--space-md);">2</div>
+                <h3 class="font-bold mb-2">Match</h3>
+                <p class="text-sm text-muted">We match you with suitable opportunities</p>
+              </div>
+              <div class="card" style="text-align: center;">
+                <div class="step-card__number" style="margin: 0 auto var(--space-md);">3</div>
+                <h3 class="font-bold mb-2">Connect</h3>
+                <p class="text-sm text-muted">A consultant contacts you to discuss options</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="PortGael" class="logo__image">
+          </a>
+          <p>Leading recruitment bridge for healthcare professionals between Portugal and Ireland. Committed to excellence, trust, and career growth.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Home</a></li>
+            <li><a href="vacancies.html" class="footer__link">Available Vacancies</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="submit-cv.html" class="footer__link">Submit CV</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__links">
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined icon">mail</span>
+              info@portgaelrecruitment.com
+            </li>
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined icon">location_on</span>
+              Stillorgan, Dublin
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 PortGael Recruitment Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../js/main.js"></script>
+</body>
+</html>
