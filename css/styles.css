@@ -231,7 +231,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
+  min-height: 4rem;
+  padding: var(--space-sm) 0;
 }
 
 .logo {
@@ -252,16 +253,19 @@ p {
 }
 
 .logo__image {
-  height: 3rem;
-  width: auto;
-  max-width: 160px;
+  height: auto;
+  width: 250px;
+  max-width: 250px;
+  max-height: 100px;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 640px) {
   .logo__image {
-    height: 2.5rem;
-    max-width: 130px;
+    width: 180px;
+    max-width: 180px;
+    max-height: 72px;
   }
 }
 
@@ -1359,6 +1363,73 @@ p {
 }
 
 /* ---------- Animations ---------- */
+/* ---------- Testimonials Carousel ---------- */
+.testimonials {
+  overflow: hidden;
+}
+
+.testimonials__track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials__track {
+  display: flex;
+  gap: var(--space-xl);
+  animation: slideLeft 40s linear infinite;
+  width: max-content;
+}
+
+.testimonials__track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  min-width: 340px;
+  max-width: 400px;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-card__text {
+  font-size: 0.9375rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: var(--space-md) 0;
+  max-width: 100%;
+}
+
+.testimonial-card__name {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+}
+
+.testimonial-card__role {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
